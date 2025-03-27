@@ -337,12 +337,14 @@ export class HeyBuddy {
         const numFramesPerEmbedding = embedding.dims[0];
         const maxEmbeddings = this.wakeWordEmbeddingFrames/numFramesPerEmbedding;
 
-        this.embeddingBufferArray.push(embedding);
 
+        // We want to run it via a "window" of audio samples at a time
+        // so we add a new element, remove the first element, then analyze the new section of audio
+        // (or rather audio embeddings) to see if the voice keyword is detected there
+        this.embeddingBufferArray.push(embedding);
         if (this.embeddingBufferArray.length > maxEmbeddings) this.embeddingBufferArray.shift();
 
         this.embeddingBuffer = await embeddingBufferArrayToEmbedding(this.embeddingBufferArray, numFramesPerEmbedding, this.embeddingDim);
-
         const {isSpeaking, speechProbability, justStoppedSpeaking, justStartedSpeaking} = await this.vad.hasSpeechAudio(lastBatch);
 
         if(justStartedSpeaking) this.speechStart();
