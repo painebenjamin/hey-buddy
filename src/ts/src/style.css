@@ -1,0 +1,152 @@
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+	padding: 0;
+    margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Arial", sans-serif;
+    background-color: rgb(11,15,25);
+    color: white
+}
+
+h1 {
+	font-size: 16px;
+	margin-top: 0;
+}
+
+p {
+	font-size: 15px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+strong, em {
+    color: #16c8ce;
+}
+
+.card {
+	max-width: 640px;
+	margin: 0 auto;
+	padding: 16px;
+	border: 1px solid rgb(107, 114, 128);
+	border-radius: 16px;
+	background-color: rgb(16, 22, 35);
+}
+
+.card p:last-child {
+	margin-bottom: 0;
+}
+
+.card img {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+#logo, #links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#links {
+    gap: 1em;
+    margin: 1em;
+}
+
+#links img {
+    height: 20px;
+}
+
+#graphs {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+label {
+    display: block;
+}
+
+#graphs div {
+    position: relative;
+}
+
+#graphs label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 120px;
+    text-transform: uppercase;
+    font-family: monospace;
+    text-align: right;
+    padding: 0 4px;
+    line-height: 20px;
+    background-image: linear-gradient(to top, rgba(255,255,255,0.1), rgba(255,255,255,0.0));
+    border: 1px solid rgba(255,255,255,0.1);
+    border-top: none;
+    border-right: none;
+}
+
+#graphs .legend {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    gap: 1px 5px;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: 10px;
+    line-height: 11px;
+}
+
+canvas.graph {
+    border: 1px solid rgba(255,255,255,0.1);
+    border-bottom: none;
+    background-image:
+        repeating-linear-gradient(to top, rgba(255,255,255,0.05), rgba(255,255,255,0.05) 1px, transparent 1px, transparent 10px),
+        linear-gradient(to top, rgba(255,255,255,0.1), rgba(255,255,255,0.0));
+}
+
+#recording {
+    margin-top: 1em;
+    position: relative;
+    display: block;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 11px;
+    background-image: linear-gradient(to top, rgba(255,255,255,0.1), rgba(255,255,255,0.0));
+	border: 1px solid rgba(255,255,255,0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#recording #audio {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#recording label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 120px;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: 12px;
+    text-align: right;
+    padding: 0 4px;
+    line-height: 20px;
+    background-image: linear-gradient(to top, rgba(255,255,255,0.1), rgba(255,255,255,0.0));
+    border: 1px solid rgba(255,255,255,0.1);
+    border-top: none;
+    border-right: none;
+}

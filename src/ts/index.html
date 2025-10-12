@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Client Test</title>
+        <link rel="stylesheet" href="./src/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.19.0/dist/ort.min.js"></script>
+        <script type="module" src="./src/hey-buddy.ts"></script>
+        <script type="module" src="./src/index.js"></script>
+    </head>
+    <body>
+        <div class="card">
+            <section id="logo">
+                <img src="./src/logo.png" alt="Hey Buddy!" />
+            </section>
+            <section id="headline">
+                <p><strong><em>Hey Buddy!</em></strong> is a library for training wake word models (a.k.a audio keyword spotters) and deploying them to the browser for real-time use on CPU or GPU.</p>
+                <p>Using a wake-word as a gating mechanism for voice-enabled web applications carries numerous benefits, including reduced power consumption, improved privacy, and enhanced performance in noisy environments over speech-to-text systems.</p>
+                <p>This space serves as a demonstration of the JavaScript library for front-end applications. Say something like, <em>&ldquo;Hey buddy, how are you?&rdquo;</em> to see the wake word and voice activity detection in action. Your voice command will be isolated as an audio clip, which is then ready to be sent to your application's backend for further processing.</p>
+            </section>
+            <section id="links">
+                <a href="https://github.com/painebenjamin/hey-buddy" target="_blank">
+                    <img src="https://img.shields.io/static/v1?label=painebenjamin&message=hey-buddy&logo=github&color=0b1830" alt="painebenjamin - hey-buddy" />
+                </a>
+                <a href="https://huggingface.co/benjamin-paine/hey-buddy" target="_blank">
+                    <img src="https://img.shields.io/static/v1?label=benjamin-paine&message=hey-buddy&logo=huggingface&color=0b1830" alt="painebenjamin - hey-buddy" />
+                </a>
+            </section>
+            <section id="graphs"></section>
+            <section id="recording">
+                <label>Recording</label>
+                <div id="audio">No recording yet</div>
+            </section>
+        </div>
+    </body>
+</html>

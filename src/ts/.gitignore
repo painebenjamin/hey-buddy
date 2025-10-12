@@ -1,0 +1,6 @@
+pretrained/
+node_modules/
+build/
+dist/
+package-lock.json
+src/onnxruntime-web
